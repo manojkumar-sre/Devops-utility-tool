@@ -6,7 +6,7 @@ def get_bucket_info():
     s3_client = boto3.client("s3")
 
     buckets = s3_client.list_buckets()["buckets"]
-    current_time = datetime.now(timezone.utc).astimezone()
+    current_date = datetime.now(timezone.utc).astimezone()
     print(current_time)
     new_bucket = []
     old_bucker = []
